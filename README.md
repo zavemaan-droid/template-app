@@ -1,30 +1,8 @@
-name: CI
+# BuilderBolt App Template
 
-on:
-  pull_request:
-  push:
-    branches: jobs:
-  test-and-build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: steps:
-      - uses: actions/checkout@v4
+Standard starter template for all new BuilderBolt applications.
 
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-          cache: 'pnpm'
+## Quick Start
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Lint
-        run: pnpm lint
-
-      - name: Build
-        run: pnpm build
-
-      - name: Test
-        run: pnpm test
+```bash
+gh repo create my-new-app --template zavemaan-droid/template-app --visibility private --confirm
