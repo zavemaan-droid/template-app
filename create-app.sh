@@ -24,5 +24,5 @@ cd "$APP_NAME"
 
 cp .env.example .env
 
-echo "Bootstrapped $APP_NAME successfully!"
-echo "Next: cd $APP_NAME && pnpm install && pnpm dev"
+echo "✅ Bootstrapped $APP_NAME successfully!"
+echo "Next: cd $APP_NAME && pnpm install"
